@@ -1,2 +1,0 @@
-# RACE
-RACE - Honours Project
