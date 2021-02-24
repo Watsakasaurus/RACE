@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fonts/back_to_school_36.tres" type="DynamicFont" id=1]
+[ext_resource path="res://buttons/menu_button.gd" type="Script" id=2]
+
+[node name="MenuButton" type="Button"]
+margin_right = 1040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 360, 120 )
+flat = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 7.62939e-06
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.866667, 0.364706, 0.203922, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "LABEL"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

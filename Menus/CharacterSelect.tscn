@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://buttons/ReturnToMainButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Menus/character_select.gd" type="Script" id=2]
+
+[node name="CharacterSelect" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReturnToMainButton" parent="CenterContainer" instance=ExtResource( 1 )]
+margin_left = 460.0
+margin_top = 300.0
+margin_right = 820.0
+margin_bottom = 420.0
+[connection signal="pressed" from="CenterContainer/ReturnToMainButton" to="." method="_on_ReturnToMainButton_pressed"]

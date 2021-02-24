@@ -16,8 +16,15 @@ _global_script_class_icons={
 [application]
 
 config/name="Race_Game"
-config/icon="res://icon.png"
+run/main_scene="res://Menus/TitleScreen.tscn"
+config/icon="res://graphics/icon.png"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
 
 [rendering]
 
+environment/default_clear_color=Color( 0.0901961, 0.360784, 0.384314, 1 )
 environment/default_environment="res://default_env.tres"

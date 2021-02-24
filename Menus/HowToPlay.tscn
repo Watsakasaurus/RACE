@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://graphics/how_to_play_screen.png" type="Texture" id=1]
+[ext_resource path="res://buttons/ReturnToMainButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Menus/how_to_play.gd" type="Script" id=3]
+
+[node name="HowToPlay" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReturnToMainButton" parent="." instance=ExtResource( 2 )]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -120.0
+margin_right = 360.0
+margin_bottom = 0.0
+[connection signal="pressed" from="ReturnToMainButton" to="." method="_on_ReturnToMainButton_pressed"]
