@@ -6,4 +6,5 @@
 scene_to_load = "res://Menus/CharacterSelect.tscn"
 
 [node name="Label" parent="." index="0"]
-text = "NEW GAME"
+text = "
+PLAY"

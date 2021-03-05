@@ -5,4 +5,5 @@
 [node name="ExitButton" instance=ExtResource( 1 )]
 
 [node name="Label" parent="." index="0"]
-text = "EXIT"
+text = "
+EXIT"

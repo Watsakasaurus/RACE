@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://buttons/ReturnToMainButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Menus/character_select.gd" type="Script" id=2]
+[ext_resource path="res://graphics/Locked Character.png" type="Texture" id=3]
+[ext_resource path="res://fonts/back_to_school_36.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Menus/LockCharColumn.tscn" type="PackedScene" id=5]
 
 [node name="CharacterSelect" type="Control"]
 anchor_right = 1.0
@@ -11,16 +14,113 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="ReturnToMainButton" parent="." instance=ExtResource( 1 )]
+margin_top = 600.0
+margin_right = 360.0
+margin_bottom = 720.0
+align = 0
+
+[node name="ChooseLabel" type="Label" parent="."]
+margin_left = 440.0
+margin_top = 600.0
+margin_right = 1231.0
+margin_bottom = 705.0
+rect_min_size = Vector2( 300, 100 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.866667, 0.364706, 0.203922, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "
+Choose your racer!"
+uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ReturnToMainButton" parent="CenterContainer" instance=ExtResource( 1 )]
-margin_left = 460.0
-margin_top = 300.0
-margin_right = 820.0
-margin_bottom = 420.0
-[connection signal="pressed" from="CenterContainer/ReturnToMainButton" to="." method="_on_ReturnToMainButton_pressed"]
+[node name="CharacterPanel" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 40.0
+margin_bottom = -160.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LockCharColumn1" parent="CharacterPanel" instance=ExtResource( 5 )]
+
+[node name="LockCharColumn2" parent="CharacterPanel" instance=ExtResource( 5 )]
+margin_left = 290.0
+margin_right = 462.0
+
+[node name="MaleCharColumn" type="VBoxContainer" parent="CharacterPanel"]
+margin_left = 466.0
+margin_right = 638.0
+margin_bottom = 520.0
+
+[node name="Racer1" type="Button" parent="CharacterPanel/MaleCharColumn"]
+margin_right = 172.0
+margin_bottom = 166.0
+icon = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Racer2" type="Button" parent="CharacterPanel/MaleCharColumn"]
+margin_top = 170.0
+margin_right = 172.0
+margin_bottom = 336.0
+icon = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Racer3" type="Button" parent="CharacterPanel/MaleCharColumn"]
+margin_top = 340.0
+margin_right = 172.0
+margin_bottom = 506.0
+icon = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FemaleCharColumn" type="VBoxContainer" parent="CharacterPanel"]
+margin_left = 642.0
+margin_right = 814.0
+margin_bottom = 520.0
+
+[node name="Racer4" type="Button" parent="CharacterPanel/FemaleCharColumn"]
+margin_right = 172.0
+margin_bottom = 166.0
+icon = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Racer5" type="Button" parent="CharacterPanel/FemaleCharColumn"]
+margin_top = 170.0
+margin_right = 172.0
+margin_bottom = 336.0
+icon = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Racer6" type="Button" parent="CharacterPanel/FemaleCharColumn"]
+margin_top = 340.0
+margin_right = 172.0
+margin_bottom = 506.0
+icon = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LockCharColumn3" parent="CharacterPanel" instance=ExtResource( 5 )]
+margin_left = 818.0
+margin_right = 990.0
+
+[node name="LockCharColumn4" parent="CharacterPanel" instance=ExtResource( 5 )]
+margin_left = 994.0
+margin_right = 1166.0
+[connection signal="pressed" from="ReturnToMainButton" to="." method="_on_ReturnToMainButton_pressed"]
