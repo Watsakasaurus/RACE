@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Locked Character.png-10ed00df19c229dc729615816d010ff9.stex"
+path="res://.import/BlackFemaleButton.png-cd2879accd44c3f2d1492d81ef70f61c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/Locked Character.png"
-dest_files=[ "res://.import/Locked Character.png-10ed00df19c229dc729615816d010ff9.stex" ]
+source_file="res://graphics/buttonGraphics/BlackFemaleButton.png"
+dest_files=[ "res://.import/BlackFemaleButton.png-cd2879accd44c3f2d1492d81ef70f61c.stex" ]
 
 [params]
 

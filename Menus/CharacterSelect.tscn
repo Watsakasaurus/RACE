@@ -1,10 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://buttons/ReturnToMainButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Menus/character_select.gd" type="Script" id=2]
-[ext_resource path="res://graphics/Locked Character.png" type="Texture" id=3]
+[ext_resource path="res://graphics/buttonGraphics/WhiteFemaleButton.png" type="Texture" id=3]
 [ext_resource path="res://fonts/back_to_school_36.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Menus/LockCharColumn.tscn" type="PackedScene" id=5]
+[ext_resource path="res://graphics/buttonGraphics/WhiteMaleButton.png" type="Texture" id=6]
+[ext_resource path="res://graphics/buttonGraphics/BlackMaleButton.png" type="Texture" id=7]
+[ext_resource path="res://graphics/buttonGraphics/AsianMaleButton.png" type="Texture" id=8]
+[ext_resource path="res://graphics/buttonGraphics/BlackFemaleButton.png" type="Texture" id=9]
+[ext_resource path="res://graphics/buttonGraphics/AsianFemaleButton.png" type="Texture" id=10]
 
 [node name="CharacterSelect" type="Control"]
 anchor_right = 1.0
@@ -62,7 +67,7 @@ margin_bottom = 520.0
 [node name="Racer1" type="Button" parent="CharacterPanel/MaleCharColumn"]
 margin_right = 172.0
 margin_bottom = 166.0
-icon = ExtResource( 3 )
+icon = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -71,7 +76,7 @@ __meta__ = {
 margin_top = 170.0
 margin_right = 172.0
 margin_bottom = 336.0
-icon = ExtResource( 3 )
+icon = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -80,7 +85,7 @@ __meta__ = {
 margin_top = 340.0
 margin_right = 172.0
 margin_bottom = 506.0
-icon = ExtResource( 3 )
+icon = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -102,7 +107,7 @@ __meta__ = {
 margin_top = 170.0
 margin_right = 172.0
 margin_bottom = 336.0
-icon = ExtResource( 3 )
+icon = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -111,7 +116,7 @@ __meta__ = {
 margin_top = 340.0
 margin_right = 172.0
 margin_bottom = 506.0
-icon = ExtResource( 3 )
+icon = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

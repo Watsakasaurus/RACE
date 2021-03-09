@@ -1,6 +1,8 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://graphics/Locked Character.png" type="Texture" id=1]
+[ext_resource path="res://graphics/buttonGraphics/lockedCharacterButton.png" type="Texture" id=1]
+
+
 
 [node name="LockCharColumn1" type="VBoxContainer"]
 margin_left = 114.0
