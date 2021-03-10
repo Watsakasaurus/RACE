@@ -72,7 +72,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Racer2" type="Button" parent="CharacterPanel/MaleCharColumn"]
+[node name="Racer3" type="Button" parent="CharacterPanel/MaleCharColumn"]
 margin_top = 170.0
 margin_right = 172.0
 margin_bottom = 336.0
@@ -81,7 +81,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Racer3" type="Button" parent="CharacterPanel/MaleCharColumn"]
+[node name="Racer5" type="Button" parent="CharacterPanel/MaleCharColumn"]
 margin_top = 340.0
 margin_right = 172.0
 margin_bottom = 506.0
@@ -95,7 +95,7 @@ margin_left = 642.0
 margin_right = 814.0
 margin_bottom = 520.0
 
-[node name="Racer4" type="Button" parent="CharacterPanel/FemaleCharColumn"]
+[node name="Racer2" type="Button" parent="CharacterPanel/FemaleCharColumn"]
 margin_right = 172.0
 margin_bottom = 166.0
 icon = ExtResource( 3 )
@@ -103,7 +103,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Racer5" type="Button" parent="CharacterPanel/FemaleCharColumn"]
+[node name="Racer4" type="Button" parent="CharacterPanel/FemaleCharColumn"]
 margin_top = 170.0
 margin_right = 172.0
 margin_bottom = 336.0
