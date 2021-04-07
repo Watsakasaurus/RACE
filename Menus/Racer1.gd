@@ -1,4 +1,4 @@
-extends Control
+extends Button
 
 
 # Declare member variables here. Examples:
@@ -14,12 +14,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_ReturnToMainButton_pressed():
-	get_tree().change_scene("res://Menus/TitleScreen.tscn")
-
-
-func _on_Racer1_pressed():
-	get_tree().change_scene("res://race_scenes/racer1Race.tscn")
-	# $Racer1.disabled = true

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://buttons/ReturnToMainButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://race_scenes/Racer.tscn" type="PackedScene" id=2]
+
+[node name="racer1Race" type="Node2D"]
+
+[node name="ReturnToMainButton" parent="." instance=ExtResource( 1 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 600.0
+margin_right = 360.0
+margin_bottom = 720.0
+
+[node name="Racer" parent="." instance=ExtResource( 2 )]
+[connection signal="pressed" from="ReturnToMainButton" to="ReturnToMainButton" method="_on_ReturnToMainButton_pressed"]
