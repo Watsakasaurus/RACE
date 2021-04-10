@@ -10,7 +10,7 @@
 [ext_resource path="res://graphics/buttonGraphics/AsianMaleButton.png" type="Texture" id=8]
 [ext_resource path="res://graphics/buttonGraphics/BlackFemaleButton.png" type="Texture" id=9]
 [ext_resource path="res://graphics/buttonGraphics/AsianFemaleButton.png" type="Texture" id=10]
-[ext_resource path="res://Menus/Racer1.gd" type="Script" id=11]
+[ext_resource path="res://Menus/racer_1_button.gd" type="Script" id=11]
 
 [node name="CharacterSelect" type="Control"]
 anchor_right = 1.0
@@ -65,7 +65,7 @@ margin_left = 466.0
 margin_right = 638.0
 margin_bottom = 520.0
 
-[node name="Racer1" type="Button" parent="CharacterPanel/MaleCharColumn"]
+[node name="Racer1Button" type="Button" parent="CharacterPanel/MaleCharColumn"]
 margin_right = 172.0
 margin_bottom = 166.0
 icon = ExtResource( 6 )
@@ -74,7 +74,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Racer3" type="Button" parent="CharacterPanel/MaleCharColumn"]
+[node name="Racer3Button" type="Button" parent="CharacterPanel/MaleCharColumn"]
 margin_top = 170.0
 margin_right = 172.0
 margin_bottom = 336.0
@@ -83,7 +83,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Racer5" type="Button" parent="CharacterPanel/MaleCharColumn"]
+[node name="Racer5Button" type="Button" parent="CharacterPanel/MaleCharColumn"]
 margin_top = 340.0
 margin_right = 172.0
 margin_bottom = 506.0
@@ -97,7 +97,7 @@ margin_left = 642.0
 margin_right = 814.0
 margin_bottom = 520.0
 
-[node name="Racer2" type="Button" parent="CharacterPanel/FemaleCharColumn"]
+[node name="Racer2Button" type="Button" parent="CharacterPanel/FemaleCharColumn"]
 margin_right = 172.0
 margin_bottom = 166.0
 icon = ExtResource( 3 )
@@ -105,7 +105,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Racer4" type="Button" parent="CharacterPanel/FemaleCharColumn"]
+[node name="Racer4Button" type="Button" parent="CharacterPanel/FemaleCharColumn"]
 margin_top = 170.0
 margin_right = 172.0
 margin_bottom = 336.0
@@ -114,7 +114,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Racer6" type="Button" parent="CharacterPanel/FemaleCharColumn"]
+[node name="Racer6Button" type="Button" parent="CharacterPanel/FemaleCharColumn"]
 margin_top = 340.0
 margin_right = 172.0
 margin_bottom = 506.0
@@ -131,4 +131,9 @@ margin_right = 990.0
 margin_left = 994.0
 margin_right = 1166.0
 [connection signal="pressed" from="ReturnToMainButton" to="." method="_on_ReturnToMainButton_pressed"]
-[connection signal="pressed" from="CharacterPanel/MaleCharColumn/Racer1" to="." method="_on_Racer1_pressed"]
+[connection signal="pressed" from="CharacterPanel/MaleCharColumn/Racer1Button" to="." method="_on_Racer1Button_pressed"]
+[connection signal="pressed" from="CharacterPanel/MaleCharColumn/Racer3Button" to="." method="_on_Racer3Button_pressed"]
+[connection signal="pressed" from="CharacterPanel/MaleCharColumn/Racer5Button" to="." method="_on_Racer5Button_pressed"]
+[connection signal="pressed" from="CharacterPanel/FemaleCharColumn/Racer2Button" to="." method="_on_Racer2Button_pressed"]
+[connection signal="pressed" from="CharacterPanel/FemaleCharColumn/Racer4Button" to="." method="_on_Racer4Button_pressed"]
+[connection signal="pressed" from="CharacterPanel/FemaleCharColumn/Racer6Button" to="." method="_on_Racer6Button_pressed"]

@@ -9,4 +9,5 @@
 margin_left = -1.33484
 margin_right = -1.33484
 custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_shadow = Color( 0.866667, 0.364706, 0.203922, 1 )
 text = "GO BACK"
