@@ -2,7 +2,11 @@ extends Control
 
 var scene_path_to_load
 # Called when the node enters the scene tree for the first time.
+
 func _ready():
+	
+	resetCharacters()
+	
 	for button in $Menu/CentreRow/RightColumn/NewGameBox.get_children():
 		button.connect("pressed", self, "_on_Button_pressed", [button.scene_to_load])
 
@@ -20,6 +24,13 @@ func _on_Button_pressed(scene_to_load):
 func _on_FadeIn_fade_finished():
 	get_tree().change_scene(scene_path_to_load)
 
-
 func _on_ExitButton_pressed():
 	get_tree().quit()
+
+func resetCharacters():
+	global.racer1IsPlayed = false
+	global.racer2IsPlayed = false
+	global.racer3IsPlayed = false
+	global.racer4IsPlayed = false
+	global.racer5IsPlayed = false
+	global.racer6IsPlayed = false

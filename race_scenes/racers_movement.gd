@@ -1,8 +1,18 @@
 extends KinematicBody2D
 
-var speed = 50
-
+var speed = 1
 var velocity = Vector2()
+
+var rng = RandomNumberGenerator.new()
+export (int) var maxSpeed = 100
+export (int) var minSpeed = 50
+
+func _ready():
+	determineSpeed()
+
+func _physics_process(delta):
+	get_input()
+	velocity = move_and_slide(velocity)
 
 func get_input():
 	
@@ -16,6 +26,8 @@ func get_input():
 		velocity = velocity.normalized() * speed
 		get_node("AnimatedSprite").play("run")
 
-func _physics_process(delta):
-	get_input()
-	velocity = move_and_slide(velocity)
+func determineSpeed():
+	speed = 1
+	rng.randomize()
+	speed = speed * rng.randf_range(minSpeed, maxSpeed)
+	
