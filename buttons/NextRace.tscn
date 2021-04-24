@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://fonts/back_to_school_36.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/back_to_school_30.tres" type="DynamicFont" id=1]
 [ext_resource path="res://buttons/menu_button.gd" type="Script" id=2]
 
 [node name="PlayNextRaceButton" type="Button"]

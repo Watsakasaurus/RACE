@@ -46,18 +46,20 @@ margin_top = 164.0
 margin_right = 1040.0
 margin_bottom = 560.0
 size_flags_vertical = 3
+alignment = 1
 
 [node name="LeftColumn" type="VBoxContainer" parent="Menu/CentreRow"]
 margin_right = 518.0
 margin_bottom = 396.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_constants/separation = 100
 alignment = 1
 
 [node name="CodeInput" type="LineEdit" parent="Menu/CentreRow/LeftColumn"]
-margin_top = 44.0
+margin_top = 48.0
 margin_right = 518.0
-margin_bottom = 124.0
+margin_bottom = 128.0
 rect_min_size = Vector2( 300, 80 )
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 8 )
@@ -67,17 +69,10 @@ placeholder_text = "ENTER CODE HERE..."
 placeholder_alpha = 0.5
 script = ExtResource( 10 )
 
-[node name="Spacer" type="ColorRect" parent="Menu/CentreRow/LeftColumn"]
-margin_top = 128.0
-margin_right = 518.0
-margin_bottom = 228.0
-rect_min_size = Vector2( 0, 100 )
-color = Color( 1, 1, 1, 0 )
-
 [node name="PlayBar" type="HBoxContainer" parent="Menu/CentreRow/LeftColumn"]
-margin_top = 232.0
+margin_top = 228.0
 margin_right = 518.0
-margin_bottom = 352.0
+margin_bottom = 348.0
 
 [node name="HowToPlayButton" parent="Menu/CentreRow/LeftColumn/PlayBar" instance=ExtResource( 4 )]
 margin_right = 518.0
@@ -92,28 +87,22 @@ margin_right = 1040.0
 margin_bottom = 396.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_constants/separation = 67
 alignment = 1
 
 [node name="NewGameBox" type="HBoxContainer" parent="Menu/CentreRow/RightColumn"]
-margin_top = 24.0
+margin_top = 44.0
 margin_right = 518.0
-margin_bottom = 144.0
+margin_bottom = 164.0
 
 [node name="NewGameButton" parent="Menu/CentreRow/RightColumn/NewGameBox" instance=ExtResource( 2 )]
 margin_right = 360.0
 margin_bottom = 120.0
 
-[node name="Spacer" type="ColorRect" parent="Menu/CentreRow/RightColumn"]
-margin_top = 148.0
-margin_right = 518.0
-margin_bottom = 248.0
-rect_min_size = Vector2( 0, 100 )
-color = Color( 1, 1, 1, 0 )
-
 [node name="ExitBox" type="HBoxContainer" parent="Menu/CentreRow/RightColumn"]
-margin_top = 252.0
+margin_top = 231.0
 margin_right = 518.0
-margin_bottom = 372.0
+margin_bottom = 351.0
 
 [node name="ExitButton" parent="Menu/CentreRow/RightColumn/ExitBox" instance=ExtResource( 3 )]
 margin_right = 360.0

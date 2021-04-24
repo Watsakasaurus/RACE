@@ -7,3 +7,4 @@
 [node name="Label" parent="." index="0"]
 text = "
 EXIT"
+valign = 0

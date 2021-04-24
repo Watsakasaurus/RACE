@@ -18,22 +18,11 @@ func _process(delta):
 
 func checkPositions():
 	racer1CheckPos()
-			
-	if (global.selectedCharacter == 2):
-		if (checkVector2 >= Vector2(1140,128)):
-			get_tree().change_scene("res://Menus/FinishScreen.tscn")
-	elif (global.selectedCharacter == 3):
-		if (checkVector3 >= Vector2(1140,192)):
-			get_tree().change_scene("res://Menus/FinishScreen.tscn")
-	elif (global.selectedCharacter == 4):
-		if (checkVector4 >= Vector2(1140,256)):
-			get_tree().change_scene("res://Menus/FinishScreen.tscn")
-	elif (global.selectedCharacter == 5):
-		if (checkVector5 >= Vector2(1140,320)):
-			get_tree().change_scene("res://Menus/FinishScreen.tscn")
-	elif (global.selectedCharacter == 6):
-		if (checkVector6 >= Vector2(1140,384)):
-			get_tree().change_scene("res://Menus/FinishScreen.tscn")
+	racer2CheckPos()
+	racer3CheckPos()
+	racer4CheckPos()
+	racer5CheckPos()
+	racer6CheckPos()
 
 func assignVectors():
 	checkVector1 = get_node("Racer1").get_position()
@@ -54,6 +43,81 @@ func racer1CheckPos():
 				global.finishPosition += 1
 			if(checkVector5 >= Vector2(1140,320)):
 				global.finishPosition += 1
-			if(checkVector6 >= Vector2(1140,394)):
+			if(checkVector6 >= Vector2(1140,384)):
+				global.finishPosition += 1
+			get_tree().change_scene("res://Menus/FinishScreen.tscn")
+
+func racer2CheckPos():
+	if (global.selectedCharacter == 2):
+		if (checkVector2 >= Vector2(1140,128)):
+			if(checkVector1 >= Vector2(1140,64)):
+				global.finishPosition += 1
+			if(checkVector3 >= Vector2(1140,192)):
+				global.finishPosition += 1
+			if(checkVector4 >= Vector2(1140,256)):
+				global.finishPosition += 1
+			if(checkVector5 >= Vector2(1140,320)):
+				global.finishPosition += 1
+			if(checkVector6 >= Vector2(1140,384)):
+				global.finishPosition += 1
+			get_tree().change_scene("res://Menus/FinishScreen.tscn")
+
+func racer3CheckPos():
+	if (global.selectedCharacter == 3):
+		if (checkVector3 >= Vector2(1140,192)):
+			if(checkVector1 >= Vector2(1140,64)):
+				global.finishPosition += 1
+			if(checkVector2 >= Vector2(1140,128)):
+				global.finishPosition += 1
+			if(checkVector4 >= Vector2(1140,256)):
+				global.finishPosition += 1
+			if(checkVector5 >= Vector2(1140,320)):
+				global.finishPosition += 1
+			if(checkVector6 >= Vector2(1140,384)):
+				global.finishPosition += 1
+			get_tree().change_scene("res://Menus/FinishScreen.tscn")
+
+func racer4CheckPos():
+	if (global.selectedCharacter == 4):
+		if (checkVector4 >= Vector2(1140,256)):
+			if(checkVector1 >= Vector2(1140,64)):
+				global.finishPosition += 1
+			if(checkVector2 >= Vector2(1140,128)):
+				global.finishPosition += 1
+			if(checkVector3 >= Vector2(1140,192)):
+				global.finishPosition += 1
+			if(checkVector5 >= Vector2(1140,320)):
+				global.finishPosition += 1
+			if(checkVector6 >= Vector2(1140,384)):
+				global.finishPosition += 1
+			get_tree().change_scene("res://Menus/FinishScreen.tscn")
+
+func racer5CheckPos():
+	if (global.selectedCharacter == 5):
+		if (checkVector5 >= Vector2(1140,320)):
+			if(checkVector1 >= Vector2(1140,64)):
+				global.finishPosition += 1
+			if(checkVector2 >= Vector2(1140,128)):
+				global.finishPosition += 1
+			if(checkVector3 >= Vector2(1140,192)):
+				global.finishPosition += 1
+			if(checkVector4 >= Vector2(1140,256)):
+				global.finishPosition += 1
+			if(checkVector6 >= Vector2(1140,384)):
+				global.finishPosition += 1
+			get_tree().change_scene("res://Menus/FinishScreen.tscn")
+
+func racer6CheckPos():
+	if (global.selectedCharacter == 6):
+		if (checkVector6 >= Vector2(1140,384)):
+			if(checkVector1 >= Vector2(1140,64)):
+				global.finishPosition += 1
+			if(checkVector2 >= Vector2(1140,128)):
+				global.finishPosition += 1
+			if(checkVector3 >= Vector2(1140,192)):
+				global.finishPosition += 1
+			if(checkVector4 >= Vector2(1140,256)):
+				global.finishPosition += 1
+			if(checkVector5 >= Vector2(1140,320)):
 				global.finishPosition += 1
 			get_tree().change_scene("res://Menus/FinishScreen.tscn")

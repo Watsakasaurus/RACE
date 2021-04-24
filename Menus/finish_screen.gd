@@ -17,8 +17,8 @@ func _process(delta):
 
 func disableNextRace():
 	if (global.allCharactersPlayed == true): #WHEN CHANGING SCREEN LAYOUT CHANGE THE PATH TO THESE OBJECTS
-		$HBoxContainer/VBoxContainer/PlayNextRaceButton.disabled = true 
-		$HBoxContainer/VBoxContainer/PlayNextRaceButton/Label.add_color_override("font_color", Color(1,1,1,0.4))
-		$HBoxContainer/VBoxContainer/PlayNextRaceButton/Label.add_color_override("font_color_shadow", Color(0.86,0.36,0.2,0.4))
+		$MainContainer/ButtonContainer/PlayNextRaceButton.disabled = true 
+		$MainContainer/ButtonContainer/PlayNextRaceButton/Label.add_color_override("font_color", Color(1,1,1,0.4))
+		$MainContainer/ButtonContainer/PlayNextRaceButton/Label.add_color_override("font_color_shadow", Color(0.86,0.36,0.2,0.4))
 
 
