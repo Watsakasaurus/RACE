@@ -12,6 +12,17 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if (global.finishPosition == 1):
+		set_text("You finished 1st!")
+	elif (global.finishPosition == 2):
+		set_text("You finished 2nd!")
+	elif (global.finishPosition == 3):
+		set_text("You finished 3rd!")
+	elif (global.finishPosition == 4):
+		set_text("You finished 4th")
+	elif (global.finishPosition == 5):
+		set_text("You finished 5th!")
+	elif (global.finishPosition == 6):
+		set_text("You finished 6th!")
 

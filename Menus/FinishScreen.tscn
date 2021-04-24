@@ -1,47 +1,91 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://buttons/ReturnToMainButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://buttons/NextRace.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Menus/race_position_label.gd" type="Script" id=3]
+[ext_resource path="res://Menus/finish_screen.gd" type="Script" id=4]
+[ext_resource path="res://fonts/back_to_school_36.tres" type="DynamicFont" id=5]
 
 [node name="FinishScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RacePositionLabel" type="Label" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -180.0
-margin_right = 180.0
-margin_bottom = 14.0
-size_flags_horizontal = 3
-align = 1
-valign = 2
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 360.0
-margin_bottom = 120.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 400.0
+margin_bottom = 720.0
+alignment = 1
+
+[node name="FinishPositionLabel" type="Label" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 264.0
+margin_right = 400.0
+margin_bottom = 324.0
+rect_min_size = Vector2( 400, 60 )
+size_flags_vertical = 5
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.866667, 0.364706, 0.203922, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+valign = 2
+uppercase = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 328.0
+margin_right = 400.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 0, 40 )
+size_flags_vertical = 5
+text = "yoooooo"
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 372.0
+margin_right = 400.0
+margin_bottom = 412.0
+rect_min_size = Vector2( 0, 40 )
+size_flags_vertical = 5
+text = "hows it"
+
+[node name="Label3" type="Label" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 416.0
+margin_right = 400.0
+margin_bottom = 456.0
+rect_min_size = Vector2( 0, 40 )
+size_flags_vertical = 5
+text = "going"
+
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
-margin_right = 360.0
-margin_bottom = 244.0
+margin_left = 404.0
+margin_right = 1280.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
 
 [node name="PlayNextRaceButton" parent="HBoxContainer/VBoxContainer" instance=ExtResource( 2 )]
-margin_right = 360.0
-margin_bottom = 120.0
+margin_top = 238.0
+margin_right = 876.0
+margin_bottom = 358.0
 
 [node name="ReturnToMainButton" parent="HBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 124.0
-margin_right = 360.0
-margin_bottom = 244.0
+margin_top = 362.0
+margin_right = 876.0
+margin_bottom = 482.0
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/ReturnToMainButton" to="HBoxContainer/VBoxContainer/ReturnToMainButton" method="_on_ReturnToMainButton_pressed"]
