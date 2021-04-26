@@ -8,13 +8,13 @@
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
 "loop": true,
-"name": "run",
-"speed": 3.0
+"name": "run_faster",
+"speed": 6.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
 "loop": true,
-"name": "run_faster",
-"speed": 6.0
+"name": "run",
+"speed": 3.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -26,7 +26,6 @@ script = ExtResource( 3 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "run"
-frame = 1
 playing = true
 offset = Vector2( 32, 32 )
 
